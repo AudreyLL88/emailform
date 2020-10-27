@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Email form</title>
+
+  </head>
+  <script src="https://kit.fontawesome.com/e55d87b16d.js" crossorigin="anonymous"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("user_XWzDZW1oOUCFfFBWubYxF");
+   })();
+</script>
+<body>
+
+  <div class="container">
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			<div class="contact-form">
+				<h1>Contact Us</h1>
+				<p class="hint-text">We'd love to hear from you, please drop us a line if you've any query.</p>
+				<form onsubmit="return sendMail(this);">
+						<div class="form-group">
+								<label for="name">Name</label>
+								<input type="text" class="form-control" id="name" required>
+							</div>       
+					<div class="form-group">
+						<label for="email">Email Address</label>
+						<input type="email" class="form-control" id="email" required>
+					</div>
+					<div class="form-group">
+						<label for="projectsummary">Message</label>
+						<textarea class="form-control" id="projectsummary" rows="5" required></textarea>
+					</div>
+					<input type="submit" class="btn btn-primary" value="Submit">
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="assets/sendEmail.js"></script>
+</body>
+
+</html>
